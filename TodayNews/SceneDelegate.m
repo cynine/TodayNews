@@ -1,6 +1,7 @@
 #import "SceneDelegate.h"
 #import "ViewController.h"
 #import "GTVideoViewController.h"
+#import "GTRecommendViewController.h"
 
 @interface SceneDelegate ()
 
@@ -17,18 +18,11 @@
     
     UITabBarController *tabBarController = [[UITabBarController alloc] init];
         
-    ViewController *controller1 = [[ViewController alloc] init];
-    controller1.tabBarItem.title = @"新闻";
-    controller1.tabBarItem.image = [UIImage imageNamed:@"icon.bundle/page@2x.png"];
-    controller1.tabBarItem.selectedImage = [UIImage imageNamed:@"icon.bundle/page_selected@2x.png"];
+    ViewController *newsVc = [[ViewController alloc] init];
     
-    GTVideoViewController *controller2 = [[GTVideoViewController alloc] init];
+    GTVideoViewController *videoVc = [[GTVideoViewController alloc] init];
     
-    UIViewController *controller3 = [[UIViewController alloc] init];
-    controller3.view.backgroundColor = [UIColor orangeColor];
-    controller3.tabBarItem.title = @"推荐";
-    controller3.tabBarItem.image = [UIImage imageNamed:@"icon.bundle/like@2x.png"];
-    controller3.tabBarItem.selectedImage = [UIImage imageNamed:@"icon.bundle/like_selected@2x.png"];
+    GTRecommendViewController *recommendVc = [[GTRecommendViewController alloc] init];
     
     UIViewController *controller4 = [[UIViewController alloc] init];
     controller4.view.backgroundColor = [UIColor lightGrayColor];
@@ -38,7 +32,7 @@
     
     UINavigationController *nav1 = [[UINavigationController alloc] initWithRootViewController: tabBarController];
     
-    [tabBarController setViewControllers:@[controller1, controller2, controller3, controller4]];
+    [tabBarController setViewControllers:@[newsVc, videoVc, recommendVc, controller4]];
     
     self.window.rootViewController = nav1;
     

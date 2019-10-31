@@ -7,12 +7,25 @@
 //
 
 #import "ViewController.h"
+#import "GTNormalTableViewCell.h"
+#import "GTDetailViewController.h"
 
 @interface ViewController ()<UITableViewDataSource, UITableViewDelegate>
 
 @end
 
 @implementation ViewController
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        self.tabBarItem.title = @"新闻";
+        self.tabBarItem.image = [UIImage imageNamed:@"icon.bundle/page@2x.png"];
+        self.tabBarItem.selectedImage = [UIImage imageNamed:@"icon.bundle/page_selected@2x.png"];
+    }
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -33,15 +46,13 @@
     
     static NSString *identifier = @"id";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    GTNormalTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     
     if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier: identifier];
+        cell = [[GTNormalTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier: identifier];
     }
     
-    cell.textLabel.text = @"内容";
-    cell.detailTextLabel.text = @"副标题";
-    cell.imageView.image = [UIImage imageNamed:@"icon.bundle/video@2x.png"];
+    [cell layoutTableViewCell];
     
     return cell;
 }
@@ -53,7 +64,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    UIViewController *viewController = [[UIViewController alloc] init];
+    GTDetailViewController *viewController = [[GTDetailViewController alloc] init];
     viewController.title = [NSString stringWithFormat:@"%ld", indexPath.row];
     viewController.view.backgroundColor = [UIColor whiteColor];
     [self.navigationController pushViewController:viewController animated:YES];
