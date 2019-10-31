@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C7E765E236AC4FA004D2978 /* icon.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3C7E765D236AC4F9004D2978 /* icon.bundle */; };
+		3C7E7661236AE579004D2978 /* GTVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7E7660236AE579004D2978 /* GTVideoViewController.m */; };
 		3CF4908D236ABDEB00A264EF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CF4908C236ABDEB00A264EF /* AppDelegate.m */; };
 		3CF49090236ABDEB00A264EF /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CF4908F236ABDEB00A264EF /* SceneDelegate.m */; };
 		3CF49093236ABDEB00A264EF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CF49092236ABDEB00A264EF /* ViewController.m */; };
@@ -36,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3C7E765D236AC4F9004D2978 /* icon.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = icon.bundle; sourceTree = "<group>"; };
+		3C7E765F236AE579004D2978 /* GTVideoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTVideoViewController.h; sourceTree = "<group>"; };
+		3C7E7660236AE579004D2978 /* GTVideoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTVideoViewController.m; sourceTree = "<group>"; };
 		3CF49088236ABDEB00A264EF /* TodayNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodayNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CF4908B236ABDEB00A264EF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3CF4908C236ABDEB00A264EF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -104,6 +109,7 @@
 		3CF4908A236ABDEB00A264EF /* TodayNews */ = {
 			isa = PBXGroup;
 			children = (
+				3C7E765D236AC4F9004D2978 /* icon.bundle */,
 				3CF4908B236ABDEB00A264EF /* AppDelegate.h */,
 				3CF4908C236ABDEB00A264EF /* AppDelegate.m */,
 				3CF4908E236ABDEB00A264EF /* SceneDelegate.h */,
@@ -115,6 +121,8 @@
 				3CF49099236ABDED00A264EF /* LaunchScreen.storyboard */,
 				3CF4909C236ABDED00A264EF /* Info.plist */,
 				3CF4909D236ABDED00A264EF /* main.m */,
+				3C7E765F236AE579004D2978 /* GTVideoViewController.h */,
+				3C7E7660236AE579004D2978 /* GTVideoViewController.m */,
 			);
 			path = TodayNews;
 			sourceTree = "<group>";
@@ -240,6 +248,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C7E765E236AC4FA004D2978 /* icon.bundle in Resources */,
 				3CF4909B236ABDED00A264EF /* LaunchScreen.storyboard in Resources */,
 				3CF49098236ABDED00A264EF /* Assets.xcassets in Resources */,
 				3CF49096236ABDEB00A264EF /* Main.storyboard in Resources */,
@@ -268,6 +277,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3CF49093236ABDEB00A264EF /* ViewController.m in Sources */,
+				3C7E7661236AE579004D2978 /* GTVideoViewController.m in Sources */,
 				3CF4908D236ABDEB00A264EF /* AppDelegate.m in Sources */,
 				3CF4909E236ABDED00A264EF /* main.m in Sources */,
 				3CF49090236ABDEB00A264EF /* SceneDelegate.m in Sources */,

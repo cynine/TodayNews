@@ -1,4 +1,6 @@
 #import "SceneDelegate.h"
+#import "ViewController.h"
+#import "GTVideoViewController.h"
 
 @interface SceneDelegate ()
 
@@ -8,9 +10,39 @@
 
 
 - (void)scene:(UIScene *)scene willConnectToSession:(UISceneSession *)session options:(UISceneConnectionOptions *)connectionOptions {
-    // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
-    // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
-    // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
+    
+    UIWindowScene *windowScene = (UIWindowScene *)scene;
+    
+    self.window = [[UIWindow alloc] initWithWindowScene:windowScene];
+    
+    UITabBarController *tabBarController = [[UITabBarController alloc] init];
+        
+    ViewController *controller1 = [[ViewController alloc] init];
+    controller1.tabBarItem.title = @"新闻";
+    controller1.tabBarItem.image = [UIImage imageNamed:@"icon.bundle/page@2x.png"];
+    controller1.tabBarItem.selectedImage = [UIImage imageNamed:@"icon.bundle/page_selected@2x.png"];
+    
+    GTVideoViewController *controller2 = [[GTVideoViewController alloc] init];
+    
+    UIViewController *controller3 = [[UIViewController alloc] init];
+    controller3.view.backgroundColor = [UIColor orangeColor];
+    controller3.tabBarItem.title = @"推荐";
+    controller3.tabBarItem.image = [UIImage imageNamed:@"icon.bundle/like@2x.png"];
+    controller3.tabBarItem.selectedImage = [UIImage imageNamed:@"icon.bundle/like_selected@2x.png"];
+    
+    UIViewController *controller4 = [[UIViewController alloc] init];
+    controller4.view.backgroundColor = [UIColor lightGrayColor];
+    controller4.tabBarItem.title = @"我的";
+    controller4.tabBarItem.image = [UIImage imageNamed:@"icon.bundle/home@2x.png"];
+    controller4.tabBarItem.selectedImage = [UIImage imageNamed:@"icon.bundle/home_selected@2x.png"];
+    
+    UINavigationController *nav1 = [[UINavigationController alloc] initWithRootViewController: tabBarController];
+    
+    [tabBarController setViewControllers:@[controller1, controller2, controller3, controller4]];
+    
+    self.window.rootViewController = nav1;
+    
+    [self.window makeKeyAndVisible];
 }
 
 
