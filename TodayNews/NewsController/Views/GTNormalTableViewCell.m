@@ -82,11 +82,6 @@
     return self;
 }
 
-- (void)deleteButtonClick {
-    
-    NSLog(@"deleteButtonClick");
-}
-
 - (void)layoutTableViewCell {
     self.titleLabel.text = @"极客时间iOS开发";
     
@@ -102,6 +97,12 @@
     self.timeLabel.frame = CGRectMake(self.commentLabel.frame.origin.x + self.commentLabel.frame.size.width + 15, self.timeLabel.frame.origin.y, self.timeLabel.frame.size.width, self.timeLabel.frame.size.height);
     
     self.rightImageView.image = [UIImage imageNamed:@"videoCover"];
+}
+
+- (void)deleteButtonClick {
+    if (self.delegate && [self.delegate respondsToSelector:@selector(tableViewCell:clickDeleteButton:)]) {
+        [self.delegate tableViewCell:self clickDeleteButton:self.deleteBtn];
+    }
 }
 
 @end

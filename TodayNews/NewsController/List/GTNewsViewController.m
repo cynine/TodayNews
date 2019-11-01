@@ -1,20 +1,26 @@
 //
-//  ViewController.m
+//  GTNewsViewController.m
 //  TodayNews
 //
 //  Created by leizhangjie on 10/31/19.
 //  Copyright © 2019 cynine. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "GTNewsViewController.h"
 #import "GTNormalTableViewCell.h"
 #import "GTDetailViewController.h"
+#import "GTDeleteCellView.h"
+#import "GTListLoader.h"
 
-@interface ViewController ()<UITableViewDataSource, UITableViewDelegate>
+@interface GTNewsViewController ()<UITableViewDataSource, UITableViewDelegate, GTNormalTableViewCellDelegate>
+
+@property (nonatomic, strong, readwrite) UITableView *tableView;
+@property (nonatomic, strong, readwrite) NSMutableArray *dataArray;
+@property (nonatomic, strong, readwrite) GTListLoader *listLoader;
 
 @end
 
-@implementation ViewController
+@implementation GTNewsViewController
 
 - (instancetype)init
 {
@@ -23,6 +29,11 @@
         self.tabBarItem.title = @"新闻";
         self.tabBarItem.image = [UIImage imageNamed:@"icon.bundle/page@2x.png"];
         self.tabBarItem.selectedImage = [UIImage imageNamed:@"icon.bundle/page_selected@2x.png"];
+        
+        _dataArray = @[].mutableCopy;
+        for (int i = 0; i < 20; i ++) {
+            [_dataArray addObject:@(i)];
+        }
     }
     return self;
 }
@@ -32,14 +43,18 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
     
-    UITableView *tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
-    tableView.dataSource = self;
-    tableView.delegate = self;
-    [self.view addSubview:tableView];
+    _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+    _tableView.dataSource = self;
+    _tableView.delegate = self;
+    [self.view addSubview:_tableView];
+    
+    self.listLoader = [[GTListLoader alloc] init];
+    [self.listLoader loadListData];
 }
 
+#pragma mark - UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 20;
+    return _dataArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -50,6 +65,7 @@
     
     if (!cell) {
         cell = [[GTNormalTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier: identifier];
+        cell.delegate = self;
     }
     
     [cell layoutTableViewCell];
@@ -68,6 +84,20 @@
     viewController.title = [NSString stringWithFormat:@"%ld", indexPath.row];
     viewController.view.backgroundColor = [UIColor whiteColor];
     [self.navigationController pushViewController:viewController animated:YES];
+}
+
+#pragma mark - tableView cell delegate
+- (void)tableViewCell:(UITableViewCell *)tableViewCell clickDeleteButton:(UIButton *)deleteButton {
+    GTDeleteCellView *deleteView = [[GTDeleteCellView alloc] initWithFrame:self.view.bounds];
+    
+    CGRect rect = [tableViewCell convertRect:deleteButton.frame toView: nil];
+    
+    __weak typeof(self) wself = self;
+    [deleteView showDeleteViewFromPoint:rect.origin clickBlock:^{
+        __strong typeof(self) strongself = wself;
+        [strongself.dataArray removeLastObject];
+        [strongself.tableView deleteRowsAtIndexPaths:@[[strongself.tableView indexPathForCell:tableViewCell]] withRowAnimation:UITableViewRowAnimationAutomatic];
+    }];
 }
 
 @end

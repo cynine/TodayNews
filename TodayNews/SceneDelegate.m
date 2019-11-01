@@ -1,5 +1,5 @@
 #import "SceneDelegate.h"
-#import "ViewController.h"
+#import "GTNewsViewController.h"
 #import "GTVideoViewController.h"
 #import "GTRecommendViewController.h"
 
@@ -18,11 +18,9 @@
     
     UITabBarController *tabBarController = [[UITabBarController alloc] init];
         
-    ViewController *newsVc = [[ViewController alloc] init];
-    
-    GTVideoViewController *videoVc = [[GTVideoViewController alloc] init];
-    
-    GTRecommendViewController *recommendVc = [[GTRecommendViewController alloc] init];
+    GTNewsViewController *newsViewController = [[GTNewsViewController alloc] init];
+    GTVideoViewController *videoViewController = [[GTVideoViewController alloc] init];
+    GTRecommendViewController *recommendViewController = [[GTRecommendViewController alloc] init];
     
     UIViewController *controller4 = [[UIViewController alloc] init];
     controller4.view.backgroundColor = [UIColor lightGrayColor];
@@ -32,7 +30,7 @@
     
     UINavigationController *nav1 = [[UINavigationController alloc] initWithRootViewController: tabBarController];
     
-    [tabBarController setViewControllers:@[newsVc, videoVc, recommendVc, controller4]];
+    [tabBarController setViewControllers:@[newsViewController, videoViewController, recommendViewController, controller4]];
     
     self.window.rootViewController = nav1;
     
