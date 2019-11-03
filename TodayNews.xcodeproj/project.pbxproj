@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -20,9 +20,16 @@
 		3CF4909E236ABDED00A264EF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CF4909D236ABDED00A264EF /* main.m */; };
 		3CF490A8236ABDED00A264EF /* TodayNewsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CF490A7236ABDED00A264EF /* TodayNewsTests.m */; };
 		3CF490B3236ABDED00A264EF /* TodayNewsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CF490B2236ABDED00A264EF /* TodayNewsUITests.m */; };
+		71463C68236E74A000B7EC78 /* GTVideoCoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 71463C67236E74A000B7EC78 /* GTVideoCoverView.m */; };
+		71463C6B236E8E5300B7EC78 /* GTVideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 71463C6A236E8E5300B7EC78 /* GTVideoPlayer.m */; };
+		71463C6E236ECC7600B7EC78 /* GTVideoToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 71463C6D236ECC7600B7EC78 /* GTVideoToolBar.m */; };
+		7159B09E236D28460023FC7D /* GTListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 7159B09D236D28460023FC7D /* GTListItem.m */; };
 		71FCBAA4236B0C9E001E10B2 /* GTRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71FCBAA3236B0C9E001E10B2 /* GTRecommendViewController.m */; };
 		71FCBAA7236B12E6001E10B2 /* GTNormalTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 71FCBAA6236B12E6001E10B2 /* GTNormalTableViewCell.m */; };
 		71FCBAAD236B2790001E10B2 /* GTDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71FCBAAC236B2790001E10B2 /* GTDetailViewController.m */; };
+		7E0A05FD2C636F87ECF10D0F /* Pods_TodayNewsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 733B75F323C544FE8A0B5469 /* Pods_TodayNewsTests.framework */; };
+		92571C6F42D13372FFF1F388 /* Pods_TodayNews.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5F6D91B7FF3F5E5F899D5C3 /* Pods_TodayNews.framework */; };
+		B4CFDD0F74C2C38ED16E2A87 /* Pods_TodayNews_TodayNewsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33EB39235979305616CBE123 /* Pods_TodayNews_TodayNewsUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +50,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		12A9C85E08801E02D49A2EE2 /* Pods-TodayNewsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodayNewsTests.debug.xcconfig"; path = "Target Support Files/Pods-TodayNewsTests/Pods-TodayNewsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		33EB39235979305616CBE123 /* Pods_TodayNews_TodayNewsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TodayNews_TodayNewsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C7E765D236AC4F9004D2978 /* icon.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = icon.bundle; sourceTree = "<group>"; };
 		3C7E765F236AE579004D2978 /* GTVideoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTVideoViewController.h; sourceTree = "<group>"; };
 		3C7E7660236AE579004D2978 /* GTVideoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTVideoViewController.m; sourceTree = "<group>"; };
@@ -68,12 +77,27 @@
 		3CF490AE236ABDED00A264EF /* TodayNewsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TodayNewsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CF490B2236ABDED00A264EF /* TodayNewsUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodayNewsUITests.m; sourceTree = "<group>"; };
 		3CF490B4236ABDED00A264EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		691DB407E605BCA6B8CF4823 /* Pods-TodayNewsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodayNewsTests.release.xcconfig"; path = "Target Support Files/Pods-TodayNewsTests/Pods-TodayNewsTests.release.xcconfig"; sourceTree = "<group>"; };
+		71463C66236E74A000B7EC78 /* GTVideoCoverView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTVideoCoverView.h; sourceTree = "<group>"; };
+		71463C67236E74A000B7EC78 /* GTVideoCoverView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTVideoCoverView.m; sourceTree = "<group>"; };
+		71463C69236E8E5300B7EC78 /* GTVideoPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTVideoPlayer.h; sourceTree = "<group>"; };
+		71463C6A236E8E5300B7EC78 /* GTVideoPlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTVideoPlayer.m; sourceTree = "<group>"; };
+		71463C6C236ECC7600B7EC78 /* GTVideoToolBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTVideoToolBar.h; sourceTree = "<group>"; };
+		71463C6D236ECC7600B7EC78 /* GTVideoToolBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTVideoToolBar.m; sourceTree = "<group>"; };
+		7159B09C236D28460023FC7D /* GTListItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTListItem.h; sourceTree = "<group>"; };
+		7159B09D236D28460023FC7D /* GTListItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTListItem.m; sourceTree = "<group>"; };
 		71FCBAA2236B0C9E001E10B2 /* GTRecommendViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTRecommendViewController.h; sourceTree = "<group>"; };
 		71FCBAA3236B0C9E001E10B2 /* GTRecommendViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTRecommendViewController.m; sourceTree = "<group>"; };
 		71FCBAA5236B12E6001E10B2 /* GTNormalTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTNormalTableViewCell.h; sourceTree = "<group>"; };
 		71FCBAA6236B12E6001E10B2 /* GTNormalTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTNormalTableViewCell.m; sourceTree = "<group>"; };
 		71FCBAAB236B2790001E10B2 /* GTDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTDetailViewController.h; sourceTree = "<group>"; };
 		71FCBAAC236B2790001E10B2 /* GTDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTDetailViewController.m; sourceTree = "<group>"; };
+		733B75F323C544FE8A0B5469 /* Pods_TodayNewsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TodayNewsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		97E6E0696EAF438DB3E2E8E1 /* Pods-TodayNews-TodayNewsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodayNews-TodayNewsUITests.release.xcconfig"; path = "Target Support Files/Pods-TodayNews-TodayNewsUITests/Pods-TodayNews-TodayNewsUITests.release.xcconfig"; sourceTree = "<group>"; };
+		C5F6D91B7FF3F5E5F899D5C3 /* Pods_TodayNews.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TodayNews.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9F5BBA33F858D0C37AFC203 /* Pods-TodayNews.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodayNews.debug.xcconfig"; path = "Target Support Files/Pods-TodayNews/Pods-TodayNews.debug.xcconfig"; sourceTree = "<group>"; };
+		EC2CD99D4423518C715FB6C3 /* Pods-TodayNews.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodayNews.release.xcconfig"; path = "Target Support Files/Pods-TodayNews/Pods-TodayNews.release.xcconfig"; sourceTree = "<group>"; };
+		F8DFF87AFF940233AC5A28AD /* Pods-TodayNews-TodayNewsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodayNews-TodayNewsUITests.debug.xcconfig"; path = "Target Support Files/Pods-TodayNews-TodayNewsUITests/Pods-TodayNews-TodayNewsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +105,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92571C6F42D13372FFF1F388 /* Pods_TodayNews.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +113,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E0A05FD2C636F87ECF10D0F /* Pods_TodayNewsTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +121,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4CFDD0F74C2C38ED16E2A87 /* Pods_TodayNews_TodayNewsUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,20 +131,21 @@
 		3C7E7665236C3538004D2978 /* NewsController */ = {
 			isa = PBXGroup;
 			children = (
-				3C7E7668236C357A004D2978 /* Views */,
+				7159B09B236D28050023FC7D /* Model */,
+				3C7E7668236C357A004D2978 /* View */,
 				3C7E7667236C3557004D2978 /* Detail */,
-				3C7E7666236C3541004D2978 /* List */,
+				3C7E7666236C3541004D2978 /* Controller */,
 			);
 			path = NewsController;
 			sourceTree = "<group>";
 		};
-		3C7E7666236C3541004D2978 /* List */ = {
+		3C7E7666236C3541004D2978 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				3CF49091236ABDEB00A264EF /* GTNewsViewController.h */,
 				3CF49092236ABDEB00A264EF /* GTNewsViewController.m */,
 			);
-			path = List;
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		3C7E7667236C3557004D2978 /* Detail */ = {
@@ -129,7 +157,7 @@
 			path = Detail;
 			sourceTree = "<group>";
 		};
-		3C7E7668236C357A004D2978 /* Views */ = {
+		3C7E7668236C357A004D2978 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				71FCBAA5236B12E6001E10B2 /* GTNormalTableViewCell.h */,
@@ -137,16 +165,7 @@
 				3C7E7662236BE1DE004D2978 /* GTDeleteCellView.h */,
 				3C7E7663236BE1DE004D2978 /* GTDeleteCellView.m */,
 			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		3C7E7669236C3922004D2978 /* Loader */ = {
-			isa = PBXGroup;
-			children = (
-				3C7E766A236C3933004D2978 /* GTListLoader.h */,
-				3C7E766B236C3933004D2978 /* GTListLoader.m */,
-			);
-			path = Loader;
+			path = View;
 			sourceTree = "<group>";
 		};
 		3CF4907F236ABDEB00A264EF = {
@@ -156,6 +175,8 @@
 				3CF490A6236ABDED00A264EF /* TodayNewsTests */,
 				3CF490B1236ABDED00A264EF /* TodayNewsUITests */,
 				3CF49089236ABDEB00A264EF /* Products */,
+				526DCD68FE41208F872BDACF /* Pods */,
+				B5195CC96B40D349C658E647 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -172,14 +193,12 @@
 		3CF4908A236ABDEB00A264EF /* TodayNews */ = {
 			isa = PBXGroup;
 			children = (
-				3C7E7669236C3922004D2978 /* Loader */,
+				71463C65236E73C200B7EC78 /* VideoController */,
 				3CF4908B236ABDEB00A264EF /* AppDelegate.h */,
 				3CF4908C236ABDEB00A264EF /* AppDelegate.m */,
 				3CF49097236ABDED00A264EF /* Assets.xcassets */,
 				71FCBAA2236B0C9E001E10B2 /* GTRecommendViewController.h */,
 				71FCBAA3236B0C9E001E10B2 /* GTRecommendViewController.m */,
-				3C7E765F236AE579004D2978 /* GTVideoViewController.h */,
-				3C7E7660236AE579004D2978 /* GTVideoViewController.m */,
 				3C7E765D236AC4F9004D2978 /* icon.bundle */,
 				3CF4909C236ABDED00A264EF /* Info.plist */,
 				3CF49099236ABDED00A264EF /* LaunchScreen.storyboard */,
@@ -210,6 +229,55 @@
 			path = TodayNewsUITests;
 			sourceTree = "<group>";
 		};
+		526DCD68FE41208F872BDACF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E9F5BBA33F858D0C37AFC203 /* Pods-TodayNews.debug.xcconfig */,
+				EC2CD99D4423518C715FB6C3 /* Pods-TodayNews.release.xcconfig */,
+				F8DFF87AFF940233AC5A28AD /* Pods-TodayNews-TodayNewsUITests.debug.xcconfig */,
+				97E6E0696EAF438DB3E2E8E1 /* Pods-TodayNews-TodayNewsUITests.release.xcconfig */,
+				12A9C85E08801E02D49A2EE2 /* Pods-TodayNewsTests.debug.xcconfig */,
+				691DB407E605BCA6B8CF4823 /* Pods-TodayNewsTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		71463C65236E73C200B7EC78 /* VideoController */ = {
+			isa = PBXGroup;
+			children = (
+				3C7E765F236AE579004D2978 /* GTVideoViewController.h */,
+				3C7E7660236AE579004D2978 /* GTVideoViewController.m */,
+				71463C66236E74A000B7EC78 /* GTVideoCoverView.h */,
+				71463C67236E74A000B7EC78 /* GTVideoCoverView.m */,
+				71463C69236E8E5300B7EC78 /* GTVideoPlayer.h */,
+				71463C6A236E8E5300B7EC78 /* GTVideoPlayer.m */,
+				71463C6C236ECC7600B7EC78 /* GTVideoToolBar.h */,
+				71463C6D236ECC7600B7EC78 /* GTVideoToolBar.m */,
+			);
+			path = VideoController;
+			sourceTree = "<group>";
+		};
+		7159B09B236D28050023FC7D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3C7E766A236C3933004D2978 /* GTListLoader.h */,
+				3C7E766B236C3933004D2978 /* GTListLoader.m */,
+				7159B09C236D28460023FC7D /* GTListItem.h */,
+				7159B09D236D28460023FC7D /* GTListItem.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B5195CC96B40D349C658E647 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C5F6D91B7FF3F5E5F899D5C3 /* Pods_TodayNews.framework */,
+				33EB39235979305616CBE123 /* Pods_TodayNews_TodayNewsUITests.framework */,
+				733B75F323C544FE8A0B5469 /* Pods_TodayNewsTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -217,9 +285,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3CF490B7236ABDED00A264EF /* Build configuration list for PBXNativeTarget "TodayNews" */;
 			buildPhases = (
+				69A6438BE50135F18DEBCE5F /* [CP] Check Pods Manifest.lock */,
 				3CF49084236ABDEB00A264EF /* Sources */,
 				3CF49085236ABDEB00A264EF /* Frameworks */,
 				3CF49086236ABDEB00A264EF /* Resources */,
+				BAEE9FDCE664B823AF1C0D16 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -234,6 +304,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3CF490BA236ABDED00A264EF /* Build configuration list for PBXNativeTarget "TodayNewsTests" */;
 			buildPhases = (
+				D92FBEC03057882CDD83B1EA /* [CP] Check Pods Manifest.lock */,
 				3CF4909F236ABDED00A264EF /* Sources */,
 				3CF490A0236ABDED00A264EF /* Frameworks */,
 				3CF490A1236ABDED00A264EF /* Resources */,
@@ -252,9 +323,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3CF490BD236ABDED00A264EF /* Build configuration list for PBXNativeTarget "TodayNewsUITests" */;
 			buildPhases = (
+				38E7ECF828D52A3EF616D5BF /* [CP] Check Pods Manifest.lock */,
 				3CF490AA236ABDED00A264EF /* Sources */,
 				3CF490AB236ABDED00A264EF /* Frameworks */,
 				3CF490AC236ABDED00A264EF /* Resources */,
+				5FE96C919CE7A3F71D962080 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -336,21 +409,128 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		38E7ECF828D52A3EF616D5BF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TodayNews-TodayNewsUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5FE96C919CE7A3F71D962080 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TodayNews-TodayNewsUITests/Pods-TodayNews-TodayNewsUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TodayNews-TodayNewsUITests/Pods-TodayNews-TodayNewsUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TodayNews-TodayNewsUITests/Pods-TodayNews-TodayNewsUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		69A6438BE50135F18DEBCE5F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TodayNews-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BAEE9FDCE664B823AF1C0D16 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TodayNews/Pods-TodayNews-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TodayNews/Pods-TodayNews-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TodayNews/Pods-TodayNews-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D92FBEC03057882CDD83B1EA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TodayNewsTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3CF49084236ABDEB00A264EF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				71FCBAAD236B2790001E10B2 /* GTDetailViewController.m in Sources */,
+				71463C68236E74A000B7EC78 /* GTVideoCoverView.m in Sources */,
+				71463C6E236ECC7600B7EC78 /* GTVideoToolBar.m in Sources */,
 				3C7E7664236BE1DE004D2978 /* GTDeleteCellView.m in Sources */,
 				71FCBAA7236B12E6001E10B2 /* GTNormalTableViewCell.m in Sources */,
 				3CF49093236ABDEB00A264EF /* GTNewsViewController.m in Sources */,
 				3C7E7661236AE579004D2978 /* GTVideoViewController.m in Sources */,
 				3C7E766C236C3933004D2978 /* GTListLoader.m in Sources */,
+				7159B09E236D28460023FC7D /* GTListItem.m in Sources */,
 				71FCBAA4236B0C9E001E10B2 /* GTRecommendViewController.m in Sources */,
 				3CF4908D236ABDEB00A264EF /* AppDelegate.m in Sources */,
 				3CF4909E236ABDED00A264EF /* main.m in Sources */,
 				3CF49090236ABDEB00A264EF /* SceneDelegate.m in Sources */,
+				71463C6B236E8E5300B7EC78 /* GTVideoPlayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -517,6 +697,7 @@
 		};
 		3CF490B8236ABDED00A264EF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E9F5BBA33F858D0C37AFC203 /* Pods-TodayNews.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -533,6 +714,7 @@
 		};
 		3CF490B9236ABDED00A264EF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC2CD99D4423518C715FB6C3 /* Pods-TodayNews.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -549,6 +731,7 @@
 		};
 		3CF490BB236ABDED00A264EF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 12A9C85E08801E02D49A2EE2 /* Pods-TodayNewsTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -568,6 +751,7 @@
 		};
 		3CF490BC236ABDED00A264EF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 691DB407E605BCA6B8CF4823 /* Pods-TodayNewsTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -587,6 +771,7 @@
 		};
 		3CF490BE236ABDED00A264EF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F8DFF87AFF940233AC5A28AD /* Pods-TodayNews-TodayNewsUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TodayNewsUITests/Info.plist;
@@ -604,6 +789,7 @@
 		};
 		3CF490BF236ABDED00A264EF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 97E6E0696EAF438DB3E2E8E1 /* Pods-TodayNews-TodayNewsUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TodayNewsUITests/Info.plist;
