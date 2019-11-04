@@ -8,6 +8,8 @@
 
 #import "GTDetailViewController.h"
 #import <WebKit/WebKit.h>
+#import "GTScreen.h"
+#import "GTMediator.h"
 
 @interface GTDetailViewController ()<WKNavigationDelegate>
 
@@ -18,6 +20,17 @@
 @end
 
 @implementation GTDetailViewController
+
++ (void)load {
+//    [GTMediator registerScheme:@"detail://" processBlock:^(NSDictionary * _Nonnull param) {
+//        NSString *url = (NSString *)[param objectForKey:@"url"];
+//        UINavigationController *navigationController = (UINavigationController *)[param objectForKey:@"controller"];
+//        GTDetailViewController *controller = [[GTDetailViewController alloc] initWithUrlString:url];
+//        [navigationController pushViewController: controller animated: YES];
+//
+//    }];
+    [GTMediator registerProtocl:@protocol(GTDetailViewControllerProtocol) class:[self class]];
+}
 
 - (void)dealloc {
     [self.webView removeObserver:self forKeyPath:@"estimatedProgress"];
@@ -36,7 +49,7 @@
     
     
     [self.view addSubview:({
-        self.webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, 88, self.view.frame.size.width, self.view.frame.size.height - 88)];
+        self.webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, STATUSBARHEIGHT + 44, self.view.frame.size.width, self.view.frame.size.height - STATUSBARHEIGHT - 44)];
         self.webView.navigationDelegate = self;
         self.webView;
     })];
@@ -45,7 +58,7 @@
     [self.webView addObserver:self forKeyPath:@"estimatedProgress" options:NSKeyValueObservingOptionNew context:nil];
     
     [self.view addSubview:({
-        self.progressView = [[UIProgressView alloc] initWithFrame:CGRectMake(0, 88, self.view.frame.size.width, 20)];
+        self.progressView = [[UIProgressView alloc] initWithFrame:CGRectMake(0, STATUSBARHEIGHT - 44, self.view.frame.size.width, 20)];
         self.progressView;
     })];
     
@@ -61,6 +74,10 @@
 
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
     self.progressView.progress = self.webView.estimatedProgress;
+}
+
+- (__kindof UIViewController *)detailViewControllerWithUrl:(NSString *)detailUrl{
+    return [[[self class] alloc] initWithUrlString:detailUrl];
 }
 
 @end

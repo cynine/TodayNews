@@ -8,10 +8,10 @@
 
 #import "GTNewsViewController.h"
 #import "GTNormalTableViewCell.h"
-#import "GTDetailViewController.h"
 #import "GTDeleteCellView.h"
 #import "GTListLoader.h"
 #import "GTListItem.h"
+#import "GTMediator.h"
 
 @interface GTNewsViewController ()<UITableViewDataSource, UITableViewDelegate, GTNormalTableViewCellDelegate>
 
@@ -84,8 +84,13 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     GTListItem *item = [self.dataArray objectAtIndex:indexPath.row];
-    GTDetailViewController *detailViewController = [[GTDetailViewController alloc] initWithUrlString: item.atricleUrl];
-    [self.navigationController pushViewController:detailViewController animated:YES];
+//    __kindof UIViewController *detailViewController = [GTMediator detailViewControllerWithUrl:item.atricleUrl];
+//    [self.navigationController pushViewController:detailViewController animated:YES];
+    
+//    [GTMediator openUrl:@"detail://" params:@{@"url": item.atricleUrl, @"controller": self.navigationController}];
+    
+    Class cls = [GTMediator classForProtocl:@protocol(GTDetailViewControllerProtocol)];
+    [self.navigationController pushViewController: [[cls alloc] detailViewControllerWithUrl:item.atricleUrl] animated:YES];
     
     [[NSUserDefaults standardUserDefaults] setBool:YES forKey:item.uniqueKey];
 }

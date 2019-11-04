@@ -24,6 +24,8 @@
 		71463C6B236E8E5300B7EC78 /* GTVideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 71463C6A236E8E5300B7EC78 /* GTVideoPlayer.m */; };
 		71463C6E236ECC7600B7EC78 /* GTVideoToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 71463C6D236ECC7600B7EC78 /* GTVideoToolBar.m */; };
 		7159B09E236D28460023FC7D /* GTListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 7159B09D236D28460023FC7D /* GTListItem.m */; };
+		71A5360C23704BB0009E075A /* GTScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 71A5360B23704BB0009E075A /* GTScreen.m */; };
+		71A5360F23706F73009E075A /* GTMediator.m in Sources */ = {isa = PBXBuildFile; fileRef = 71A5360E23706F73009E075A /* GTMediator.m */; };
 		71FCBAA4236B0C9E001E10B2 /* GTRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71FCBAA3236B0C9E001E10B2 /* GTRecommendViewController.m */; };
 		71FCBAA7236B12E6001E10B2 /* GTNormalTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 71FCBAA6236B12E6001E10B2 /* GTNormalTableViewCell.m */; };
 		71FCBAAD236B2790001E10B2 /* GTDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71FCBAAC236B2790001E10B2 /* GTDetailViewController.m */; };
@@ -86,6 +88,10 @@
 		71463C6D236ECC7600B7EC78 /* GTVideoToolBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTVideoToolBar.m; sourceTree = "<group>"; };
 		7159B09C236D28460023FC7D /* GTListItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTListItem.h; sourceTree = "<group>"; };
 		7159B09D236D28460023FC7D /* GTListItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTListItem.m; sourceTree = "<group>"; };
+		71A5360A23704BB0009E075A /* GTScreen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTScreen.h; sourceTree = "<group>"; };
+		71A5360B23704BB0009E075A /* GTScreen.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTScreen.m; sourceTree = "<group>"; };
+		71A5360E23706F73009E075A /* GTMediator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTMediator.m; sourceTree = "<group>"; };
+		71A5361023707077009E075A /* GTMediator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMediator.h; sourceTree = "<group>"; };
 		71FCBAA2236B0C9E001E10B2 /* GTRecommendViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTRecommendViewController.h; sourceTree = "<group>"; };
 		71FCBAA3236B0C9E001E10B2 /* GTRecommendViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTRecommendViewController.m; sourceTree = "<group>"; };
 		71FCBAA5236B12E6001E10B2 /* GTNormalTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTNormalTableViewCell.h; sourceTree = "<group>"; };
@@ -193,12 +199,15 @@
 		3CF4908A236ABDEB00A264EF /* TodayNews */ = {
 			isa = PBXGroup;
 			children = (
-				71463C65236E73C200B7EC78 /* VideoController */,
 				3CF4908B236ABDEB00A264EF /* AppDelegate.h */,
 				3CF4908C236ABDEB00A264EF /* AppDelegate.m */,
 				3CF49097236ABDED00A264EF /* Assets.xcassets */,
+				71A5361023707077009E075A /* GTMediator.h */,
+				71A5360E23706F73009E075A /* GTMediator.m */,
 				71FCBAA2236B0C9E001E10B2 /* GTRecommendViewController.h */,
 				71FCBAA3236B0C9E001E10B2 /* GTRecommendViewController.m */,
+				71A5360A23704BB0009E075A /* GTScreen.h */,
+				71A5360B23704BB0009E075A /* GTScreen.m */,
 				3C7E765D236AC4F9004D2978 /* icon.bundle */,
 				3CF4909C236ABDED00A264EF /* Info.plist */,
 				3CF49099236ABDED00A264EF /* LaunchScreen.storyboard */,
@@ -207,6 +216,7 @@
 				3C7E7665236C3538004D2978 /* NewsController */,
 				3CF4908E236ABDEB00A264EF /* SceneDelegate.h */,
 				3CF4908F236ABDEB00A264EF /* SceneDelegate.m */,
+				71463C65236E73C200B7EC78 /* VideoController */,
 			);
 			path = TodayNews;
 			sourceTree = "<group>";
@@ -517,8 +527,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71A5360C23704BB0009E075A /* GTScreen.m in Sources */,
 				71FCBAAD236B2790001E10B2 /* GTDetailViewController.m in Sources */,
 				71463C68236E74A000B7EC78 /* GTVideoCoverView.m in Sources */,
+				71A5360F23706F73009E075A /* GTMediator.m in Sources */,
 				71463C6E236ECC7600B7EC78 /* GTVideoToolBar.m in Sources */,
 				3C7E7664236BE1DE004D2978 /* GTDeleteCellView.m in Sources */,
 				71FCBAA7236B12E6001E10B2 /* GTNormalTableViewCell.m in Sources */,
